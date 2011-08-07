@@ -39,9 +39,9 @@
 }
 
 `HDX` <- 
-  function(symbol,days,tz="")
+  function(symbol,days=0,tz="")
 {
-  cmd <- paste("HDX",symbol,days=0,"\r\n",sep=",")
+  cmd <- paste("HDX",symbol,days,"\r\n",sep=",")
   retval <- NULL
   tryCatch(
      {
