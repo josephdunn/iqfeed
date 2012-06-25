@@ -130,6 +130,7 @@
     r <- rawToChar(r)
     r <- unlist(strsplit(r,"\r\n"))
     r <- r[r!="!ENDMSG!,"]
+    r <- rev(r)
     y <- strsplit(r,',')
     z <- t(as.data.frame(y,stringsAsFactors=FALSE))
     rownames(z) <- NULL
